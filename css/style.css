@@ -708,6 +708,16 @@ button:focus{
     background-position: 0 0;
     position: relative;
 }
+
+.ketering-breadcrumb {
+    padding: 250px 0 150px;
+    background: url(../images/viber_image_2021-07-20_18-35-01-879.jpg) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 0 0;
+    position: relative;
+    height: 100vh;
+}
 .all-page-title .container{
 	position: relative;
 	z-index: 2;
