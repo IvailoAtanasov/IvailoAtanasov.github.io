@@ -221,8 +221,8 @@ button:focus{
 #navbars-rs-food.collapse.navbar-collapse {
     width: 100%;
     margin-left: 0;
-    position: absolute;
-    right: 5rem;
+    /*position: absolute;*/
+    /*right: 5rem;*/
 }
 
 
