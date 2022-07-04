@@ -338,11 +338,15 @@ button:focus{
 }
 .about-section-box .img-fluid{
 	box-shadow: -10px -10px 0px #945cb4;
+
 }
 .img-fluid {
-    height: 30rem;
+    height: auto;
+    max-width: 100%;
+    
+    
 }
-.inner-column{} 
+
 .inner-column h1{
 	font-family: 'Arbutus Slab', serif;
 	font-size: 30px;
@@ -444,16 +448,16 @@ button:focus{
     box-shadow: 2px 20px 45px 5px rgba(0,0,0,.2);
 }
 
-.gallery-single{
-	margin: 30px 0px;
-}
 
 .gallery-single {
     position: relative;
     overflow: hidden;
     -webkit-box-shadow: 0 0 10px #ccc;
     box-shadow: 0 0 10px #ccc;
+    margin: 30px 0px;
+    width :20rem;
 }
+
 
 .why-text {
     position: absolute;
@@ -492,13 +496,13 @@ button:focus{
 	bottom: 0px;
 }
 
-.gallery-single {
-    height: 30rem;
-}
+
 
 .button-b {
     color: #945cb4;
 }
+
+
 
 
 /*------------------------------------------------------------------
