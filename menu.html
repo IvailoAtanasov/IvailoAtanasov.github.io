@@ -1,642 +1,724 @@
 <!DOCTYPE html>
-<html lang="en"><!-- Basic -->
-<head>
-	<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
-   
+<html lang="en">
+  <!-- Basic -->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
     <!-- Mobile Metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
- 
-     <!-- Site Metas -->
-    <title>При Бари</title>  
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Site Metas -->
+    <title>При Бари</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
 
     <!-- Site Icons -->
-    <link rel="shortcut icon" href="images/logo1.png" type="image/x-icon">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="shortcut icon" href="images/logo1.png" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">    
-	<!-- Site CSS -->
-    <link rel="stylesheet" href="css/style.css">    
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="css/style.css" />
     <!-- Responsive CSS -->
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/responsive.css" />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/custom.css" />
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-	<style type="text/css">
-		/* Set the size of the div element that contains the map */
-		#map {
-		  height: 400px;
-		  /* The height is 400 pixels */
-		  width: 100%;
-		  /* The width is the width of the web page */
-		}
-	  </style>
-	  <script>
-		// Initialize and add the map
-		function initMap() {
-		  // The location of Uluru
-		  const uluru = { lat: 42.713219, lng: 23.246146 };
-		  // The map, centered at Uluru
-		  const map = new google.maps.Map(document.getElementById("map"), {
-			zoom: 15,
-			center: uluru,
-		  });
-		  // The marker, positioned at Uluru
-		  const marker = new google.maps.Marker({
-			position: uluru,
-			map: map,
-		  });
-		}
-	  </script>
+    <style type="text/css">
+      /* Set the size of the div element that contains the map */
+      #map {
+        height: 400px;
+        /* The height is 400 pixels */
+        width: 100%;
+        /* The width is the width of the web page */
+      }
+    </style>
+    <script>
+      // Initialize and add the map
+      function initMap() {
+        // The location of Uluru
+        const uluru = { lat: 42.713219, lng: 23.246146 };
+        // The map, centered at Uluru
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 15,
+          center: uluru,
+        });
+        // The marker, positioned at Uluru
+        const marker = new google.maps.Marker({
+          position: uluru,
+          map: map,
+        });
+      }
+    </script>
+  </head>
 
-</head>
+  <body>
+    <!-- Start header -->
+    <header class="top-navbar">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container header-container">
+          <a class="navbar-brand" href="index.html">
+            <img
+              class="logo-style"
+              src="images/logo.jpg"
+              width="300"
+              height="70"
+              alt=""
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbars-rs-food"
+            aria-controls="navbars-rs-food"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbars-rs-food">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="menu.html">Меню</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link about-anchor" href="index.html#about"
+                  >За нас</a
+                >
+              </li>
 
-<body>
-	<!-- Start header -->
-	<header class="top-navbar">
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<div class="container header-container">
-				<a class="navbar-brand" href="index.html">
-					<img class="logo-style" src="images/logo.jpg" width="300" height="70" alt="" />
-				</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
-				  <span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbars-rs-food">
-					<ul class="navbar-nav ml-auto">
-						
-						<li class="nav-item"><a class="nav-link" href="menu.html">Меню</a></li>
-						<li class="nav-item"><a class="nav-link about-anchor" href="index.html#about">За нас</a></li>
-						
-						<li class="nav-item"><a class="nav-link about-anchor" href="specials.html">Специален повод</a></li>
-						<li class="nav-item"><a class="nav-link" href="ketering.html">Кетъринг</a></li>
-						<li class="nav-item"><a class="nav-link" href="index.html#contact">Контакти</a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-	</header>
-	<!-- End header -->
-	
-	<!-- Start All Pages -->
-	<div class="all-page-title page-breadcrumb">
-		<div class="container text-center">
-			<div class="row">
-				<div class="col-lg-12">
-					<h1 class='menu-title'>Поръчай до домът или офиса</h1>
-					<p><a class="btn btn-lg btn-circle btn-outline-new-white"  href="tel:00359885650835">Доставка</a></p>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- End All Pages -->
-	
-	<!-- Start Menu -->
-	<div class="menu-box">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="heading-title text-center">
-						<h2>Нашето Меню</h2>
-						<p>Приготвено с много любов</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="special-menu text-center">
-						<div class="button-group filter-button-group">
-							<button class="active" data-filter="*">Всички</button>
-							<button data-filter=".cakes">Торти</button>
-							<button data-filter=".sweets">Сладки Спеециалитети</button>
-							<button data-filter=".cookies">Домашни Бисквити</button>
-							<button data-filter=".choko">Шоколад</button>
-						</div>
-					</div>
-				</div>
-			</div>
-				
-			<div class="row  d-flex justify-content-center special-list">
-				<div class="col-lg-4 col-md-6 special-grid cakes">
-					<div class="gallery-single fix">
-						<img src="images/0002.JPG"  class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Рафаело</h4>
-							<p>Кокосов блат в комбинация с крем от нежен бял шоколад</p>
-							<h5>5.50лв/парче</h5>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-lg-4 col-md-6 special-grid cakes">
-					<div class="gallery-single fix">
-						<img src="images/0009.JPG" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Снежанка</h4>
-							<p>Орехов пандишпанен блат в комбинация с гриляж от ядки и домашен крем</p>
-							<h5>5.50/парче</h5>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-lg-4 col-md-6 special-grid cakes">
-					<div class="gallery-single fix">
-						<img src="images/0013.JPG" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Павлова</h4>
-							<p>Целувачен блат в комбинация с нежен крем от домашна сметана и горски плодове</p>
-							<h5>5лв/парче</h5>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-lg-4 col-md-6 special-grid cakes">
-					<div class="gallery-single fix">
-						<img src="images/0018.JPG" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Шоколадов мус</h4>
-							<p>Пандишпанен блат в комбинация с крем от нежен шоколадов мус и тофифи</p>
-							<h5>5лв/парче</h5>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-lg-4 col-md-6 special-grid cakes">
-					<div class="gallery-single fix">
-						<img src="images/0022.JPG" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Шанфастък и малини</h4>
-							<p>Шамфъстъчен блат в комбинация с нежен крем от рикота и малина.</p>
-							<h5>5лв/парче/h5>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-lg-4 col-md-6 special-grid cakes">
-					<div class="gallery-single fix">
-						<img src="images/0027.JPG" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Баварско Изкушение</h4>
-							<p>Орехово-бадемов блат   комбиниран  с баварски крем,  шоколад и какао</p>
-							<h5>5лв/парче</h5>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-lg-4 col-md-6 special-grid cakes">
-					<div class="gallery-single fix">
-						<img src="images/0031.JPG" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Чиизкейк</h4>
-							<p>Крем от домашна сметана и сирене покрити с боровинки, малини
-								или вишни, върху бисквитена подложка</p>
-							<h5>5лв/парче</h5>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-lg-4 col-md-6 special-grid cakes">
-					<div class="gallery-single fix">
-						<img src="images/0036.JPG" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Домашна</h4>
-							<p>Пандишпанен  блат  в  комбинация с целувки,  течен шоколад  и  плодово ванилов крем</p>
-							<h5>5лв/парче</h5>
-						</div>
-					</div>
-				</div>
-				
-				<div class="col-lg-4 col-md-6 special-grid cakes">
-					<div class="gallery-single fix">
-						<img src="images/0039.JPG" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Медена торта</h4>
-							<p>Нежен меден блат в комбинация с крем маскарпоне и кондензирано мляко</p>
-							<h5>5лв/парче</h5>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 special-grid cakes">
-					<div class="gallery-single fix">
-						<img src="images/0044.JPG" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Баденмайер</h4>
-							<p>???</p>
-							<h5> 5лв/парче</h5>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 special-grid cakes">
-					<div class="gallery-single fix">
-						<img src="images/0047.JPG" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Тирамису</h4>
-							<p>Бишкоти в комбинация с нежен крем от маскарпоне и десероно амарето</p>
-							<h5>5.5лв/парче</h5>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 special-grid sweets">
-					<div class="gallery-single fix">
-						<img src="images/0078.JPG" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Плодов Тарт</h4>
-							<p>Печена бисквитена подложка с домашен крем, шоколад и плодове</p>
-							<h5>4.5лв/парче</h5>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 special-grid sweets">
-					<div class="gallery-single fix">
-						<img src="images/0084.JPG" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Плодово Парфе</h4>
-							<p>Нежен пандишпан в комбинация с плодове и фин крем</p>
-							<h5>4.5лв/парзе</h5>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 special-grid cakes">
-					<div class="gallery-single fix">
-						<img src="images/0112.JPG" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Шоколадов Ганаж</h4>
-							<p>Шоколадови блатове в комбинациця с ганаж от млечен шоколад и малини</p>
-							<h5>6лв/парче</h5>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 special-grid cakes">
-					<div class="gallery-single fix">
-						<img src="images/0118.JPG" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Кирш</h4>
-							<p>Нежен шоколадов и пандишпан с крем от домашна сметана, извара и белгийски шоколад  
-								</p>
-							<h5>5.50лв/парче</h5>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 special-grid cakes">
-					<div class="gallery-single fix">
-						<img src="images/0121.JPG" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Лимончело</h4>
-							<p>Бишкоти в комбинация с нежен пандишпан, ликьор лимончело и нежен крем от домашно цедено кисело мляко</p>
-							<h5>5лв/парче</h5>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 special-grid sweets">
-					<div class="gallery-single fix">
-						<img src="images/0125.JPG" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Ябълков пай</h4>
-							<p>Нежно френско ронливо тесто в комбинация с ябълки</p>
-							<h5>5лв/парче</h5>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 special-grid sweets">
-					<div class="gallery-single fix">
-						<img src="images/0128.JPG" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Виенски ябълков щтрудел</h4>
-							<p>Предлага се само на място</p>
-							<h5>6.50лв/парче</h5>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 special-grid cakes">
-					<div class="gallery-single fix">
-						<img src="images/0132.JPG" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Японска Торта</h4>
-							<p>Бадемови блатове и пандишпан в комбинация с нежен млечен и бял шоколадов мус</p>
-							<h5>5.5лв/парче</h5>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 special-grid sweets">
-					<div class="gallery-single fix">
-						<img src="images/0137.JPG" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Мраморен гугелхуфт</h4>
-							<p>Предлага се само на място</p>
-							<h5>6лв/парче</h5>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 special-grid cakes">
-					<div class="gallery-single fix">
-						<img src="images/0041.JPG" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Бисквитена торта с маскарпоне</h4>
-							<p>Бисквити с нежен крем от маскарпоне и шоколад</p>
-							<h5>5лв/парче</h5>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 special-grid cookies">
-					<div class="gallery-single fix">
-						<img src="images/0049.JPG" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Австрийски бисквити</h4>
-							<p>бисквити с три вида ядки и лимонов сок</p>
-							<h5>2.80лв/100гр</h5>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 special-grid cookies">
-					<div class="gallery-single fix">
-						<img src="images/0050.JPG" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Шприц</h4>
-							<p>Бисквити с мармалад и шоколад</p>
-							<h5>2.5/100гр</h5>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 special-grid cookies">
-					<div class="gallery-single fix">
-						<img src="images/0052.JPG" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Кокосов Сладки</h4>
-							<p>Кокос и шоколад</p>
-							<h5>2.80лв/100гр</h5>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 special-grid cookies">
-					<div class="gallery-single fix">
-						<img src="images/0054.JPG" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Бисквити Сабле</h4>
-							<p>2.80лв</p>
-							<h5>Нежни бисквити с кайсиево сладко/100гр</h5>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 special-grid cookies">
-					<div class="gallery-single fix">
-						<img src="images/0055.JPG" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Постни Бисквити</h4>
-							<p></p>
-							<h5>2лв/100гр</h5>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 special-grid choko">
-					<div class="gallery-single fix">
-						<img src="images/0057.JPG" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Таралежки с Бадем</h4>
-							<p></p>
-							<h5>6лв/100гр</h5>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 special-grid choko">
-					<div class="gallery-single fix">
-						<img src="images/0058.JPG" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Пралини детелинка</h4>
-							<p></p>
-							<h5>8лв/100гр</h5>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 special-grid choko">
-					<div class="gallery-single fix">
-						<img src="images/0061.JPG" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Морски Раковини</h4>
-							<p></p>
-							<h5>8лв/100гр</h5>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 special-grid choko">
-					<div class="gallery-single fix">
-						<img src="images/0063.JPG" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Триъгълници с млечен шоколад</h4>
-							<p></p>
-							<h5>8/100гр</h5>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 special-grid sweets">
-					<div class="gallery-single fix">
-						<img src="images/0064.JPG" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Тарталети с шоколад</h4>
-							<p></p>
-							<h5>1.9лв/бр</h5>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 special-grid sweets">
-					<div class="gallery-single fix">
-						<img src="images/0065.JPG" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Тарталета с вишни</h4>
-							<p></p>
-							<h5>1.90лв/бр</h5>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 special-grid sweets">
-					<div class="gallery-single fix">
-						<img src="images/0066.JPG" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Еклер с шоколад</h4>
-							<p></p>
-							<h5>1.10лв/бр</h5>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 special-grid sweets">
-					<div class="gallery-single fix">
-						<img src="images/0067.JPG" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Скаличка</h4>
-							<p></p>
-							<h5>2лв/бр</h5>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 special-grid sweets">
-					<div class="gallery-single fix">
-						<img src="images/0069.JPG" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Еклер с пудра захар</h4>
-							<p></p>
-							<h5>1лв/бр</h5>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 special-grid choko">
-					<div class="gallery-single fix">
-						<img src="images/0087.JPG" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Шоколадови сърца</h4>
-							<p>Нежен пълнеж от малини и бейлис</p>
-							<h5>8лв/100гр</h5>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 special-grid choko">
-					<div class="gallery-single fix">
-						<img src="images/0062 croped.jpg" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Ръчно изработени шоколадови барчета</h4>
-							<p></p>
-							<h5>3.50лв/бр</h5>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 special-grid sweets">
-					<div class="gallery-single fix">
-						<img src="images/viber_image_2021-07-20_18-34-49-909.jpg" class="img-fluid" alt="Image">
-						<div class="why-text">
-							<h4>Кайзер Шмарен</h4>
-							<p>Кралска Палачинка (предлага се само на място)</p>
-							<h5>7.50лв/брой</h5>
-						</div>
-					</div>
-				</div>
-				
-				
-				
-			</div>
-		</div>
-	</div>
-	<!-- End Menu -->
-	<!-- End Menu -->
-	
-	<!-- Start QT -->
-	<div class="qt-box qt-background">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 ml-auto mr-auto text-left">
-					<p class="lead ">
-						" Ние можем да направим всяка торта която пожелате. "
-					</p>
-					
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- End QT -->
-	
-	
-	
-	<!-- Start Contact info -->
-	<!-- Start Contact info -->
-	<div class="contact-imfo-box">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4">
-					<i class="fa fa-volume-control-phone"></i>
-					<div class="overflow-hidden">
-						<h4>Телефон</h4>
-						<p class="lead">
-							+359 885 650 835
-						</p>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<i class="fa fa-envelope"></i>
-					<div class="overflow-hidden">
-						<h4>Имейл</h4>
-						<p class="lead">
-							pribari@gmail.com
-						</p>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<i class="fa fa-map-marker"></i>
-					<div class="overflow-hidden">
-						<h4>Адрес</h4>
-						<p class="lead">
-							Люлин 8, ул.Генерал Казимир Ернрод 34 партер
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- End Contact info -->
-	
-	<!-- Start Footer -->
-	<footer class="footer-area bg-f">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-3 col-md-6">
-					<h3>За нас</h3>
-					<p>Integer cursus scelerisque ipsum id efficitur. Donec a dui fringilla, gravida lorem ac, semper magna. Aenean rhoncus ac lectus a interdum. Vivamus semper posuere dui, at ornare turpis ultrices sit amet. Nulla cursus lorem ut nisi porta, ac eleifend arcu ultrices.</p>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<h3>Работно време</h3>
-					<p><span class="text-color">Понеделник до Петък </span>8:30 - 19:00</p>
-					<p><span class="text-color">Събота и Неделя :</span> 10:00 - 17:30</p>
-					
-					
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<h3>Контакти</h3>
-					<p class="lead">Адрес: Люлин 8 ул. Генерал Казимир Ернрод 34</p>
-					<p class="lead"><a href="#">+359 885 650 835</a></p>
-					<p><a href="#">deal_company@abv.bg</a></p>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<ul class="list-inline f-social">
-						<li class="list-inline-item"><a href="https://www.facebook.com/torti.priBari/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-						<li class="list-inline-item"><a href="https://www.instagram.com/sladkarskakashta/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-					</ul>
-					
-				</div>
-			</div>
-		</div>
-		
-		<div class="copyright">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12">
-						<p class="company-name">All Rights Reserved. &copy; 2021 <a href="#">При Бари</a> 
-					
-					</div>
-				</div>
-			</div>
-		</div>
-		
-	</footer>
-	<!-- End Footer -->
-	
-	<a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+              <li class="nav-item">
+                <a class="nav-link about-anchor" href="specials.html"
+                  >Специален повод</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ketering.html">Кетъринг</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#contact">Контакти</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- End header -->
 
-	<!-- ALL JS FILES -->
-	<script src="js/jquery-3.2.1.min.js"></script>
-	<script src="js/popper.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+    <!-- Start All Pages -->
+    <div class="all-page-title page-breadcrumb">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-lg-12">
+            <h1 class="menu-title">Поръчай до домът или офиса</h1>
+            <p>
+              <a
+                class="btn btn-lg btn-circle btn-outline-new-white"
+                href="tel:00359885650835"
+                >Доставка</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End All Pages -->
+
+    <!-- Start Menu -->
+    <div class="menu-box">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="heading-title text-center">
+              <h2>Нашето Меню</h2>
+              <p>Приготвено с много любов</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="special-menu text-center">
+              <div class="button-group filter-button-group">
+                <button class="active" data-filter="*">Всички</button>
+                <button data-filter=".cakes">Торти</button>
+                <button data-filter=".sweets">Сладки Спеециалитети</button>
+                <button data-filter=".cookies">Домашни Бисквити</button>
+                <button data-filter=".choko">Шоколад</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row d-flex justify-content-center special-list">
+          <div class="col-lg-4 col-md-6 special-grid cakes">
+            <div class="gallery-single fix">
+              <img src="images/0002.JPG" class="img-fluid" alt="Image" />
+              <div class="why-text">
+                <h4>Рафаело</h4>
+                <p>Кокосов блат в комбинация с крем от нежен бял шоколад</p>
+                <h5>5.50лв/парче</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 special-grid cakes">
+            <div class="gallery-single fix">
+              <img src="images/0009.JPG" class="img-fluid" alt="Image" />
+              <div class="why-text">
+                <h4>Снежанка</h4>
+                <p>
+                  Орехов пандишпанен блат в комбинация с гриляж от ядки и
+                  домашен крем
+                </p>
+                <h5>5.50/парче</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 special-grid cakes">
+            <div class="gallery-single fix">
+              <img src="images/0013.JPG" class="img-fluid" alt="Image" />
+              <div class="why-text">
+                <h4>Павлова</h4>
+                <p>
+                  Целувачен блат в комбинация с нежен крем от домашна сметана и
+                  горски плодове
+                </p>
+                <h5>5лв/парче</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 special-grid cakes">
+            <div class="gallery-single fix">
+              <img src="images/0018.JPG" class="img-fluid" alt="Image" />
+              <div class="why-text">
+                <h4>Шоколадов мус</h4>
+                <p>
+                  Пандишпанен блат в комбинация с крем от нежен шоколадов мус и
+                  тофифи
+                </p>
+                <h5>5лв/парче</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 special-grid cakes">
+            <div class="gallery-single fix">
+              <img src="images/0022.JPG" class="img-fluid" alt="Image" />
+              <div class="why-text">
+                <h4>Шанфастък и малини</h4>
+                <p>
+                  Шамфъстъчен блат в комбинация с нежен крем от рикота и малина.
+                </p>
+                <h5>5лв/парче</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 special-grid cakes">
+            <div class="gallery-single fix">
+              <img src="images/0027.JPG" class="img-fluid" alt="Image" />
+              <div class="why-text">
+                <h4>Баварско Изкушение</h4>
+                <p>
+                  Орехово-бадемов блат комбиниран с баварски крем, шоколад и
+                  какао
+                </p>
+                <h5>5лв/парче</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 special-grid cakes">
+            <div class="gallery-single fix">
+              <img src="images/0031.JPG" class="img-fluid" alt="Image" />
+              <div class="why-text">
+                <h4>Чиизкейк</h4>
+                <p>
+                  Крем от домашна сметана и сирене покрити с боровинки, малини
+                  или вишни, върху бисквитена подложка
+                </p>
+                <h5>5лв/парче</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 special-grid cakes">
+            <div class="gallery-single fix">
+              <img src="images/0036.JPG" class="img-fluid" alt="Image" />
+              <div class="why-text">
+                <h4>Домашна</h4>
+                <p>
+                  Пандишпанен блат в комбинация с целувки, течен шоколад и
+                  плодово ванилов крем
+                </p>
+                <h5>5лв/парче</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 special-grid cakes">
+            <div class="gallery-single fix">
+              <img src="images/0039.JPG" class="img-fluid" alt="Image" />
+              <div class="why-text">
+                <h4>Медена торта</h4>
+                <p>
+                  Нежен меден блат в комбинация с крем маскарпоне и кондензирано
+                  мляко
+                </p>
+                <h5>5лв/парче</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 special-grid cakes">
+            <div class="gallery-single fix">
+              <img src="images/0044.JPG" class="img-fluid" alt="Image" />
+              <div class="why-text">
+                <h4>Баденмайер</h4>
+                <p>
+                  Три вида шоколадов мус, фин пандишпан и карамелизирани ядки
+                </p>
+                <h5>5лв/парче</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 special-grid cakes">
+            <div class="gallery-single fix">
+              <img src="images/0047.JPG" class="img-fluid" alt="Image" />
+              <div class="why-text">
+                <h4>Тирамису</h4>
+                <p>
+                  Бишкоти в комбинация с нежен крем от маскарпоне и десероно
+                  амарето
+                </p>
+                <h5>5.5лв/парче</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 special-grid sweets">
+            <div class="gallery-single fix">
+              <img src="images/0078.JPG" class="img-fluid" alt="Image" />
+              <div class="why-text">
+                <h4>Плодов Тарт</h4>
+                <p>
+                  Печена бисквитена подложка с домашен крем, шоколад и плодове
+                </p>
+                <h5>4.5лв/парче</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 special-grid sweets">
+            <div class="gallery-single fix">
+              <img src="images/0084.JPG" class="img-fluid" alt="Image" />
+              <div class="why-text">
+                <h4>Плодово Парфе</h4>
+                <p>Нежен пандишпан в комбинация с плодове и фин крем</p>
+                <h5>4.5лв/парзе</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 special-grid cakes">
+            <div class="gallery-single fix">
+              <img src="images/0112.JPG" class="img-fluid" alt="Image" />
+              <div class="why-text">
+                <h4>Шоколадов Ганаж</h4>
+                <p>
+                  Шоколадови блатове в комбинациця с ганаж от млечен шоколад и
+                  малини
+                </p>
+                <h5>6лв/парче</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 special-grid cakes">
+            <div class="gallery-single fix">
+              <img src="images/0118.JPG" class="img-fluid" alt="Image" />
+              <div class="why-text">
+                <h4>Кирш</h4>
+                <p>
+                  Нежен шоколадов и пандишпан с крем от домашна сметана, извара
+                  и белгийски шоколад
+                </p>
+                <h5>5.50лв/парче</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 special-grid cakes">
+            <div class="gallery-single fix">
+              <img src="images/0121.JPG" class="img-fluid" alt="Image" />
+              <div class="why-text">
+                <h4>Лимончело</h4>
+                <p>
+                  Бишкоти в комбинация с нежен пандишпан, ликьор лимончело и
+                  нежен крем от домашно цедено кисело мляко
+                </p>
+                <h5>5лв/парче</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 special-grid sweets">
+            <div class="gallery-single fix">
+              <img src="images/0125.JPG" class="img-fluid" alt="Image" />
+              <div class="why-text">
+                <h4>Ябълков пай</h4>
+                <p>Нежно френско ронливо тесто в комбинация с ябълки</p>
+                <h5>5лв/парче</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 special-grid sweets">
+            <div class="gallery-single fix">
+              <img src="images/0128.JPG" class="img-fluid" alt="Image" />
+              <div class="why-text">
+                <h4>Виенски ябълков щтрудел</h4>
+                <p>Предлага се само на място</p>
+                <h5>6.50лв/парче</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 special-grid cakes">
+            <div class="gallery-single fix">
+              <img src="images/0132.JPG" class="img-fluid" alt="Image" />
+              <div class="why-text">
+                <h4>Японска Торта</h4>
+                <p>
+                  Бадемови блатове и пандишпан в комбинация с нежен млечен и бял
+                  шоколадов мус
+                </p>
+                <h5>5.5лв/парче</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 special-grid sweets">
+            <div class="gallery-single fix">
+              <img src="images/0137.JPG" class="img-fluid" alt="Image" />
+              <div class="why-text">
+                <h4>Мраморен гугелхуфт</h4>
+                <p>Предлага се само на място</p>
+                <h5>6лв/парче</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 special-grid cakes">
+            <div class="gallery-single fix">
+              <img src="images/0041.JPG" class="img-fluid" alt="Image" />
+              <div class="why-text">
+                <h4>Бисквитена торта с маскарпоне</h4>
+                <p>Бисквити с нежен крем от маскарпоне и шоколад</p>
+                <h5>5лв/парче</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 special-grid cookies">
+            <div class="gallery-single fix">
+              <img src="images/0049.JPG" class="img-fluid" alt="Image" />
+              <div class="why-text">
+                <h4>Австрийски бисквити</h4>
+                <p>бисквити с три вида ядки и лимонов сок</p>
+                <h5>2.80лв/100гр</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 special-grid cookies">
+            <div class="gallery-single fix">
+              <img src="images/0050.JPG" class="img-fluid" alt="Image" />
+              <div class="why-text">
+                <h4>Шприц</h4>
+                <p>Бисквити с мармалад и шоколад</p>
+                <h5>2.5/100гр</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 special-grid cookies">
+            <div class="gallery-single fix">
+              <img src="images/0052.JPG" class="img-fluid" alt="Image" />
+              <div class="why-text">
+                <h4>Кокосов Сладки</h4>
+                <p>Кокос и шоколад</p>
+                <h5>2.80лв/100гр</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 special-grid cookies">
+            <div class="gallery-single fix">
+              <img src="images/0054.JPG" class="img-fluid" alt="Image" />
+              <div class="why-text">
+                <h4>Бисквити Сабле</h4>
+                <p>Нежни бисквити с кайсиево сладко/100гр</p>
+                <h5>2.80лв</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 special-grid cookies">
+            <div class="gallery-single fix">
+              <img src="images/0055.JPG" class="img-fluid" alt="Image" />
+              <div class="why-text">
+                <h4>Постни Бисквити</h4>
+                <p></p>
+                <h5>2лв/100гр</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 special-grid choko">
+            <div class="gallery-single fix">
+              <img src="images/0057.JPG" class="img-fluid" alt="Image" />
+              <div class="why-text">
+                <h4>Таралежки с Бадем</h4>
+                <p></p>
+                <h5>6лв/100гр</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 special-grid choko">
+            <div class="gallery-single fix">
+              <img src="images/0058.JPG" class="img-fluid" alt="Image" />
+              <div class="why-text">
+                <h4>Пралини детелинка</h4>
+                <p></p>
+                <h5>8лв/100гр</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 special-grid choko">
+            <div class="gallery-single fix">
+              <img src="images/0061.JPG" class="img-fluid" alt="Image" />
+              <div class="why-text">
+                <h4>Морски Раковини</h4>
+                <p></p>
+                <h5>8лв/100гр</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 special-grid choko">
+            <div class="gallery-single fix">
+              <img src="images/0063.JPG" class="img-fluid" alt="Image" />
+              <div class="why-text">
+                <h4>Триъгълници с млечен шоколад</h4>
+                <p></p>
+                <h5>8лв/100гр</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 special-grid sweets">
+            <div class="gallery-single fix">
+              <img src="images/0064.JPG" class="img-fluid" alt="Image" />
+              <div class="why-text">
+                <h4>Тарталети с шоколад</h4>
+                <p></p>
+                <h5>1.90лв/бр</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 special-grid sweets">
+            <div class="gallery-single fix">
+              <img src="images/0065.JPG" class="img-fluid" alt="Image" />
+              <div class="why-text">
+                <h4>Тарталета с вишни</h4>
+                <p></p>
+                <h5>1.90лв/бр</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 special-grid sweets">
+            <div class="gallery-single fix">
+              <img src="images/0066.JPG" class="img-fluid" alt="Image" />
+              <div class="why-text">
+                <h4>Еклер с шоколад</h4>
+                <p></p>
+                <h5>1.10лв/бр</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 special-grid sweets">
+            <div class="gallery-single fix">
+              <img src="images/0067.JPG" class="img-fluid" alt="Image" />
+              <div class="why-text">
+                <h4>Скаличка</h4>
+                <p></p>
+                <h5>2лв/бр</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 special-grid sweets">
+            <div class="gallery-single fix">
+              <img src="images/0069.JPG" class="img-fluid" alt="Image" />
+              <div class="why-text">
+                <h4>Еклер с пудра захар</h4>
+                <p></p>
+                <h5>1лв/бр</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 special-grid choko">
+            <div class="gallery-single fix">
+              <img src="images/0087.JPG" class="img-fluid" alt="Image" />
+              <div class="why-text">
+                <h4>Шоколадови сърца</h4>
+                <p>Нежен пълнеж от малини и бейлис</p>
+                <h5>8лв/100гр</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 special-grid choko">
+            <div class="gallery-single fix">
+              <img src="images/0062 croped.jpg" class="img-fluid" alt="Image" />
+              <div class="why-text">
+                <h4>Ръчно изработени шоколадови барчета</h4>
+                <p></p>
+                <h5>3.50лв/бр</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 special-grid sweets">
+            <div class="gallery-single fix">
+              <img
+                src="images/viber_image_2021-07-20_18-34-49-909.jpg"
+                class="img-fluid"
+                alt="Image"
+              />
+              <div class="why-text">
+                <h4>Кайзер Шмарен</h4>
+                <p>Кралска Палачинка (предлага се само на място)</p>
+                <h5>7.50лв/брой</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Menu -->
+    <!-- End Menu -->
+
+    <!-- Start QT -->
+    <div class="qt-box qt-background">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 ml-auto mr-auto text-left">
+            <p class="lead">
+              " Ние можем да направим всяка торта която пожелате. "
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End QT -->
+
+    <!-- Start Contact info -->
+    <!-- Start Contact info -->
+    <div class="contact-imfo-box">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <i class="fa fa-volume-control-phone"></i>
+            <div class="overflow-hidden">
+              <h4>Телефон</h4>
+              <p class="lead">+359 885 650 835</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <i class="fa fa-envelope"></i>
+            <div class="overflow-hidden">
+              <h4>Имейл</h4>
+              <p class="lead">pribari@gmail.com</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <i class="fa fa-map-marker"></i>
+            <div class="overflow-hidden">
+              <h4>Адрес</h4>
+              <p class="lead">Люлин 8, ул.Генерал Казимир Ернрод 34 партер</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Contact info -->
+
+    <!-- Start Footer -->
+    <footer class="footer-area bg-f">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <h3>За нас</h3>
+            <p>
+              Integer cursus scelerisque ipsum id efficitur. Donec a dui
+              fringilla, gravida lorem ac, semper magna. Aenean rhoncus ac
+              lectus a interdum. Vivamus semper posuere dui, at ornare turpis
+              ultrices sit amet. Nulla cursus lorem ut nisi porta, ac eleifend
+              arcu ultrices.
+            </p>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h3>Работно време</h3>
+            <p>
+              <span class="text-color">Понеделник до Петък </span>8:30 - 19:00
+            </p>
+            <p>
+              <span class="text-color">Събота и Неделя :</span> 10:00 - 17:30
+            </p>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h3>Контакти</h3>
+            <p class="lead">Адрес: Люлин 8 ул. Генерал Казимир Ернрод 34</p>
+            <p class="lead"><a href="#">+359 885 650 835</a></p>
+            <p><a href="#">deal_company@abv.bg</a></p>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <ul class="list-inline f-social">
+              <li class="list-inline-item">
+                <a href="https://www.facebook.com/torti.priBari/"
+                  ><i class="fa fa-facebook" aria-hidden="true"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.instagram.com/sladkarskakashta/"
+                  ><i class="fa fa-instagram" aria-hidden="true"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <p class="company-name">
+                All Rights Reserved. &copy; 2021 <a href="#">При Бари</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    <a href="#" id="back-to-top" title="Back to top" style="display: none"
+      >&uarr;</a
+    >
+
+    <!-- ALL JS FILES -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <!-- ALL PLUGINS -->
-	<script src="js/jquery.superslides.min.js"></script>
-	<script src="js/images-loded.min.js"></script>
-	<script src="js/isotope.min.js"></script>
-	<script src="js/baguetteBox.min.js"></script>
-	<script src="js/form-validator.min.js"></script>
+    <script src="js/jquery.superslides.min.js"></script>
+    <script src="js/images-loded.min.js"></script>
+    <script src="js/isotope.min.js"></script>
+    <script src="js/baguetteBox.min.js"></script>
+    <script src="js/form-validator.min.js"></script>
     <script src="js/contact-form-script.js"></script>
     <script src="js/custom.js"></script>
-</body>
+  </body>
 </html>
